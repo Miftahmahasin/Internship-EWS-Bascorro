@@ -10,7 +10,7 @@ while True:
     
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     blur = cv2.GaussianBlur(gray, (17,17), 0)
-    circles = cv2.HoughCircles(blur, cv2.HOUGH_GRADIENT, 1.2, 20000, param1=100, param2=42, minRadius=52, maxRadius=300 )
+    circles = cv2.HoughCircles(blur, cv2.HOUGH_GRADIENT, 1.2, 20000, param1=100, param2=30, minRadius=52, maxRadius=300 )
 
     if circles is not None:
         circles = np.uint16(np.around(circles))
